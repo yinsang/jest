@@ -17,6 +17,7 @@ By default, Jest tests complete once they reach the end of their execution. That
 // Don't do this!
 test('the data is peanut butter', () => {
   function callback(data) {
+    // The test completes early, and the expectation will run sometime in the future when the test has already been marked as passed.
     expect(data).toBe('peanut butter');
   }
 
